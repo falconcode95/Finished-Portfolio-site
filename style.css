@@ -63,8 +63,8 @@ a {
 }
 
 .close-sign {
-    width: 5vmin;
-    height: 5vh;
+    width: 20%;
+    height: 20%;
     position: absolute;
     top: 0;
     right: 0;
@@ -433,11 +433,11 @@ footer p {
     font-family: 'inter' !important;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
     html {
         font-size: 13px;
     }
-}
+} */
 
 @media (max-width: 1024px) {
 
