@@ -19,6 +19,7 @@ html {
     background-color: aqua;
     padding: 0.5rem;
     opacity: 0;
+    z-index: 100;
 }
 
 .animate-clipboard {
