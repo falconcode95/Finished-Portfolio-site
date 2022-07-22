@@ -11,6 +11,29 @@ html {
     font-family: 'inter';
 }
 
+.clipboard-text {
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    background-color: aqua;
+    padding: 0.5rem;
+    opacity: 0;
+}
+
+.animate-clipboard {
+    animation: fade 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 .section2, .section3, .section4 {
     margin-top: 7rem;
 }

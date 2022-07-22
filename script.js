@@ -4,6 +4,16 @@ const closeSign = document.getElementsByClassName("close-sign");
 const close1 = document.getElementsByClassName("close1");
 const close2 = document.getElementsByClassName("close2");
 const menuDetails = document.getElementsByClassName("menu-details");
+const emails = document.getElementsByClassName('e-mail');
+const clipboard = document.getElementsByClassName('clipboard-text')[0];
+console.log(clipboard);
+for(let i=0; i < emails.length; i++){
+    emails[i].addEventListener('click', ()=> {
+        let content = 'a.z.mohamed@hotmail.com';
+        clipboard.classList.add('animate-clipboard')
+        navigator.clipboard.writeText(content);
+    })
+}
 
 const closeHover = () => {
     close1[0].style.transition = 'background-color 400ms, transform 300ms';
@@ -74,73 +84,3 @@ firstPage.from('nav', {
 .from('.landing-page button', {
     ease: "power1.out", y: 500
 }, 0.5)
-
-// const secondPage = gsap.timeline({
-//     defaults: {
-//         ease: "power1.out", opacity: 0  
-//     },
-//     scrollTrigger: {
-//         trigger: '.section2',
-//         scrub: true,
-//         pin: true,
-//         start: "top top",
-//         markers: true,
-//         // pinSpacing: false
-//         // // end: "+=3000"
-//     }
-// })
-// secondPage.from('.question-mark', {
-//     y: 500
-// })
-// .from('.content', {
-//     x: 500
-// }, 0)
-
-// // const thirdPage = gsap.timeline({
-// //     defaults: {
-// //         ease: "power1.out", opacity: 0  
-// //     },
-// //     scrollTrigger: {
-// //         trigger: '.section3',
-// //         // // scrub: true,
-// //         // // pin: true,
-// //         // start: "top top",
-// //         // // markers: true,
-// //     }
-// // })
-// // thirdPage.from('.projects-section h3', {
-// //     y: 1000
-// // })
-// // .from('.project0', {
-// //     x: -1000
-// // }, 0)
-// // .from('.project1', {
-// //     y: 9000
-// // }, 0)
-// // .from('.project2', {
-// //     x: 1000
-// // }, 0)
-
-// const fourthPage = gsap.timeline({
-//     defaults: {
-//         ease: "power1.out", opacity: 0  
-//     },
-//     scrollTrigger: {
-//         trigger: '.section4',
-//         scrub: true,
-//         pin: true,
-//         start: "top top",
-//         markers: true
-//     }
-// })
-// fourthPage.from('#more-info h3', {   x: -500
-// })
-// .from('.mini-projects > *', {
-//     x: 500
-// }, 0)
-// .from('.tech-logos', {
-//     x: -500
-// }, 0)
-// .from('footer', {
-//     y: 500
-// }, 0)
